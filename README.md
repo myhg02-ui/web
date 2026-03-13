@@ -5,11 +5,24 @@ Sitio principal de FYIS, pensado para inicio rápido en móvil y PC.
 ## Lo que incluye
 
 - Diseño limpio y liviano (sin animaciones pesadas)
-- 2 botones principales: **Bots** y **Contacto**
+- 3 botones principales: **Bots**, **Contacto** y **Referencias**
 - En **Bots** muestra plataformas activas y abre Netflix en nueva pestaña
 - En **Contacto** muestra WhatsApp y Telegram
+- En **Referencias** muestra visor de 10 imágenes (Marzo 2026)
 - URL limpias (sin `.html`) gracias a Next.js
 - Configuración lista para deploy en Vercel
+
+## Carpeta de referencias
+
+Guarda tus pruebas en:
+
+- `public/referencias/`
+
+Nombres sugeridos:
+
+- `ref1.jpg`, `ref2.jpg`, ..., `ref10.jpg`
+
+También acepta `png` y `webp` con el mismo nombre base.
 
 ## Ejecutar en local
 

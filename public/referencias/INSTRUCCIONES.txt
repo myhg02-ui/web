@@ -1,0 +1,16 @@
+Guarda aquí tus imágenes de referencias.
+
+Nombres recomendados:
+- ref1.jpg
+- ref2.jpg
+- ref3.jpg
+- ref4.jpg
+- ref5.jpg
+- ref6.jpg
+- ref7.jpg
+- ref8.jpg
+- ref9.jpg
+- ref10.jpg
+
+También puedes usar .png o .webp si mantienes el nombre base.
+Si usas otro formato, avisa y lo ajusto automáticamente.

@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { useState } from "react";
 
 type TabKey = "bots" | "contacto";
@@ -8,20 +9,21 @@ const NETFLIX_LINK = "https://fyistv.mypemx.com/";
 const WHATSAPP_LINK = "https://wa.me/51942354613";
 const TELEGRAM_MAIN = "https://t.me/Fyis2";
 const TELEGRAM_SECONDARY = "https://t.me/Fyis1";
-const SITE_LINK_FALLBACK = "https://fyis.vercel.app";
+const SITE_LINK = "https://fyis.mypemx.com/";
 
 export default function HomePage() {
   const [tab, setTab] = useState<TabKey>("bots");
   const [logoMissing, setLogoMissing] = useState(false);
 
   const copySiteLink = async () => {
-    const link =
-      typeof window !== "undefined" ? window.location.href : SITE_LINK_FALLBACK;
+    const link = typeof window !== "undefined" ? SITE_LINK : SITE_LINK;
     await navigator.clipboard.writeText(link);
   };
 
   return (
     <main className="page">
+      <div className="bg-glow bg-glow-a" aria-hidden="true" />
+      <div className="bg-glow bg-glow-b" aria-hidden="true" />
       <section className="card" aria-label="Inicio FYIS">
         <header className="hero">
           {!logoMissing ? (
@@ -39,7 +41,10 @@ export default function HomePage() {
           <div>
             <p className="badge">Centro de soporte</p>
             <h1>FYIS</h1>
-            <p className="subtitle">Atención digital con acceso rápido y seguro.</p>
+            <p className="subtitle">
+              Servicio premium para soporte digital, verificación y atención
+              continua.
+            </p>
           </div>
         </header>
 
@@ -60,6 +65,9 @@ export default function HomePage() {
           >
             Contacto
           </button>
+          <Link href="/referencias" className="tab tab-link">
+            Referencias
+          </Link>
         </nav>
 
         {tab === "bots" ? (
@@ -95,12 +103,12 @@ export default function HomePage() {
               tendrás los contactos vigentes.
             </p>
             <div className="backup-link-box">
-              <span className="backup-link-label">Enlace de respaldo:</span>
-              <a href={SITE_LINK_FALLBACK} target="_blank" rel="noreferrer">
-                {SITE_LINK_FALLBACK}
+              <span className="backup-link-label">Enlace:</span>
+              <a href={SITE_LINK} target="_blank" rel="noreferrer">
+                {SITE_LINK}
               </a>
               <button type="button" className="copy-btn" onClick={copySiteLink}>
-                Copiar enlace actual
+                Copiar enlace
               </button>
             </div>
             <div className="contact-list">
