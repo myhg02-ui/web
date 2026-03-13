@@ -46,7 +46,7 @@ export default function ReferenciasPage() {
 
       <section className="ref-card" aria-label="Referencias de clientes">
         <header className="ref-header">
-          <div>
+          <div className="ref-header-text">
             <p className="badge">Validación social</p>
             <h1>Referencias Marzo - 2026</h1>
             <p className="subtitle ref-subtitle">
@@ -54,14 +54,14 @@ export default function ReferenciasPage() {
               viejas de más de 2 años, mientras continuamos vendiendo en Telegram.
             </p>
             <p className="ref-telegram">
-              Canal activo: {" "}
+              Canal activo:{" "}
               <a href="https://t.me/referenciasfyis" target="_blank" rel="noreferrer">
                 t.me/referenciasfyis
               </a>
             </p>
           </div>
           <Link href="/" className="back-home">
-            Volver al inicio
+            ← Volver al inicio
           </Link>
         </header>
 

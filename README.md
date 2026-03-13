@@ -42,13 +42,37 @@ npm run build
 npm run start
 ```
 
-## Deploy en Vercel
+## Deploy en Vercel (CI/CD automático)
 
-1. Sube este proyecto a GitHub.
-2. Entra a Vercel y elige **New Project**.
-3. Importa el repositorio.
-4. Framework detectado: **Next.js**.
-5. Deploy.
+El repositorio incluye un workflow de GitHub Actions (`.github/workflows/deploy.yml`) que despliega automáticamente:
+
+- **Push a `main`** → deploy de **producción**
+- **Pull Request** → deploy de **preview** (publica la URL como comentario en el PR)
+
+### Paso 1 — Conectar el proyecto a Vercel
+
+1. Inicia sesión en [vercel.com](https://vercel.com) y crea un nuevo proyecto importando este repositorio.
+2. En la primera configuración Vercel detecta Next.js automáticamente; haz clic en **Deploy** una sola vez para registrar el proyecto.
+3. Una vez creado el proyecto, ve a **Settings → General** y anota:
+   - **Project ID** (`prj_xxxxxxxxxx`)
+4. Ve a **Settings → Account** (o **Team Settings** si es una organización) y anota:
+   - **Team/Org ID** (`team_xxxxxxxxxx`)
+5. Ve a tu perfil → **Settings → Tokens** y crea un token con nombre `github-actions`.
+
+### Paso 2 — Agregar los secrets en GitHub
+
+En tu repositorio de GitHub → **Settings → Secrets and variables → Actions → New repository secret**, agrega:
+
+| Secret | Valor |
+|---|---|
+| `VERCEL_TOKEN` | Token de API creado en el paso anterior |
+| `VERCEL_ORG_ID` | Team/Org ID de tu cuenta Vercel |
+| `VERCEL_PROJECT_ID` | Project ID del proyecto en Vercel |
+
+### Paso 3 — Hacer push
+
+Cualquier push a `main` (o abrir un PR) disparará el workflow automáticamente.
+
 
 ## Dominio corto sugerido
 
