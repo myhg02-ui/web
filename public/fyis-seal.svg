@@ -1,0 +1,30 @@
+<svg width="420" height="420" viewBox="0 0 420 420" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="g1" x1="40" y1="40" x2="380" y2="380" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#A7D8FF"/>
+      <stop offset="1" stop-color="#D7F0FF"/>
+    </linearGradient>
+    <linearGradient id="g2" x1="130" y1="130" x2="290" y2="290" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FF7AA9"/>
+      <stop offset="1" stop-color="#FFB4D0"/>
+    </linearGradient>
+  </defs>
+  <circle cx="210" cy="210" r="176" fill="url(#g1)" stroke="#2563EB" stroke-width="10"/>
+  <path d="M142 144C142 117 165 95 193 95C205 95 216 99 225 107C234 99 246 95 258 95C286 95 309 117 309 144C309 171 286 194 258 194H193C165 194 142 171 142 144Z" fill="white"/>
+  <ellipse cx="180" cy="145" rx="20" ry="24" fill="url(#g2)"/>
+  <ellipse cx="272" cy="145" rx="20" ry="24" fill="url(#g2)"/>
+  <circle cx="187" cy="154" r="4" fill="#1F3A8A"/>
+  <circle cx="265" cy="154" r="4" fill="#1F3A8A"/>
+  <path d="M210 170C217 179 233 179 240 170" stroke="#1F3A8A" stroke-width="4" stroke-linecap="round"/>
+  <path d="M120 262C120 218 156 182 200 182H220C264 182 300 218 300 262V276C300 294 285 308 267 308H153C135 308 120 294 120 276V262Z" fill="white"/>
+  <path d="M151 309L210 345L269 309" fill="#7CC8FF"/>
+  <path d="M108 282C87 282 69 299 69 320C69 341 87 358 108 358H144V282H108Z" fill="#60A5FA"/>
+  <path d="M312 282C333 282 351 299 351 320C351 341 333 358 312 358H276V282H312Z" fill="#60A5FA"/>
+  <path d="M93 68L127 104L101 120L77 94L93 68Z" fill="#D1FAE5" stroke="#2563EB" stroke-width="6"/>
+  <path d="M327 68L293 104L319 120L343 94L327 68Z" fill="#D1FAE5" stroke="#2563EB" stroke-width="6"/>
+  <path d="M95 74L124 104L103 116L84 95L95 74Z" fill="#F9A8D4"/>
+  <path d="M325 74L296 104L317 116L336 95L325 74Z" fill="#F9A8D4"/>
+  <path d="M98 266C122 241 161 235 192 251" stroke="#3B82F6" stroke-width="8" stroke-linecap="round"/>
+  <path d="M322 266C298 241 259 235 228 251" stroke="#3B82F6" stroke-width="8" stroke-linecap="round"/>
+  <text x="210" y="396" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="46" font-weight="700" fill="#145DBD">FYIS</text>
+</svg>
