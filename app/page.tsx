@@ -1,18 +1,18 @@
 "use client";
 
-import Link from "next/link";
 import { useState } from "react";
 
-type TabKey = "bots" | "contacto";
+type TabKey = "contacto" | "bots";
 
 const NETFLIX_LINK = "https://fyistv.mypemx.com/";
-const WHATSAPP_LINK = "https://wa.me/51942354613";
+const WHATSAPP_MAIN_LINK = "https://wa.me/639631207428";
+const WHATSAPP_PAYMENT_LINK = "https://wa.me/51986215989";
 const TELEGRAM_MAIN = "https://t.me/Fyis2";
 const TELEGRAM_SECONDARY = "https://t.me/Fyis1";
 const SITE_LINK = "https://fyis.mypemx.com/";
 
 export default function HomePage() {
-  const [tab, setTab] = useState<TabKey>("bots");
+  const [tab, setTab] = useState<TabKey>("contacto");
   const [logoMissing, setLogoMissing] = useState(false);
 
   const copySiteLink = async () => {
@@ -42,21 +42,13 @@ export default function HomePage() {
             <p className="badge">Centro de soporte</p>
             <h1>FYIS</h1>
             <p className="subtitle">
-              Servicio premium para soporte digital, verificación y atención
-              continua.
+              Soporte profesional con atención directa y disponibilidad
+              permanente.
             </p>
           </div>
         </header>
 
         <nav className="tabs" aria-label="Secciones principales">
-          <button
-            type="button"
-            className={tab === "bots" ? "tab active" : "tab"}
-            onClick={() => setTab("bots")}
-            aria-pressed={tab === "bots"}
-          >
-            Bots
-          </button>
           <button
             type="button"
             className={tab === "contacto" ? "tab active" : "tab"}
@@ -65,12 +57,69 @@ export default function HomePage() {
           >
             Contacto
           </button>
-          <Link href="/referencias" className="tab tab-link">
-            Referencias
-          </Link>
+          <button
+            type="button"
+            className={tab === "bots" ? "tab active" : "tab"}
+            onClick={() => setTab("bots")}
+            aria-pressed={tab === "bots"}
+          >
+            Bots
+          </button>
         </nav>
 
-        {tab === "bots" ? (
+        {tab === "contacto" ? (
+          <section className="panel" aria-label="Datos de contacto">
+            <h2>Contacto oficial</h2>
+            <p className="hint">
+              Guarda este enlace. Aquí se mantienen actualizados todos los
+              canales de contacto.
+            </p>
+            <div className="backup-link-box">
+              <span className="backup-link-label">Enlace:</span>
+              <a href={SITE_LINK} target="_blank" rel="noreferrer">
+                {SITE_LINK}
+              </a>
+              <button type="button" className="copy-btn" onClick={copySiteLink}>
+                Copiar enlace
+              </button>
+            </div>
+            <div className="contact-grid">
+              <article className="contact-item">
+                <p className="mini-tag">Canal principal</p>
+                <p>
+                  <strong>WhatsApp:</strong>{" "}
+                  <a href={WHATSAPP_MAIN_LINK} target="_blank" rel="noreferrer">
+                    +63 9631207428
+                  </a>
+                </p>
+              </article>
+              <article className="contact-item">
+                <p className="mini-tag">Respaldo de pagos</p>
+                <p>
+                  <strong>WhatsApp del pago (escribir por respaldo):</strong>{" "}
+                  <a href={WHATSAPP_PAYMENT_LINK} target="_blank" rel="noreferrer">
+                    +51 986 215 989
+                  </a>
+                </p>
+              </article>
+              <article className="contact-item">
+                <p className="mini-tag">Telegram</p>
+                <p>
+                  <strong>Principal:</strong>{" "}
+                  <a href={TELEGRAM_MAIN} target="_blank" rel="noreferrer">
+                    @Fyis2
+                  </a>
+                </p>
+                <p>
+                  <strong>Secundario:</strong>{" "}
+                  <a href={TELEGRAM_SECONDARY} target="_blank" rel="noreferrer">
+                    @Fyis1
+                  </a>
+                </p>
+              </article>
+            </div>
+          </section>
+        ) : (
           <section className="panel" aria-label="Bots de soporte">
             <h2>Soporte con bot</h2>
             <p className="hint">
@@ -94,43 +143,6 @@ export default function HomePage() {
                 Ir a Netflix
               </a>
             </article>
-          </section>
-        ) : (
-          <section className="panel" aria-label="Datos de contacto">
-            <h2>Contacto actualizado</h2>
-            <p className="hint">
-              Guarda este enlace ahora. Si se pierde WhatsApp, aquí siempre
-              tendrás los contactos vigentes.
-            </p>
-            <div className="backup-link-box">
-              <span className="backup-link-label">Enlace:</span>
-              <a href={SITE_LINK} target="_blank" rel="noreferrer">
-                {SITE_LINK}
-              </a>
-              <button type="button" className="copy-btn" onClick={copySiteLink}>
-                Copiar enlace
-              </button>
-            </div>
-            <div className="contact-list">
-              <p>
-                <strong>WhatsApp:</strong>{" "}
-                <a href={WHATSAPP_LINK} target="_blank" rel="noreferrer">
-                  +51 942 354 613
-                </a>
-              </p>
-              <p>
-                <strong>Telegram principal:</strong>{" "}
-                <a href={TELEGRAM_MAIN} target="_blank" rel="noreferrer">
-                  @Fyis2
-                </a>
-              </p>
-              <p>
-                <strong>Telegram secundario:</strong>{" "}
-                <a href={TELEGRAM_SECONDARY} target="_blank" rel="noreferrer">
-                  @Fyis1
-                </a>
-              </p>
-            </div>
           </section>
         )}
       </section>

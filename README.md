@@ -5,24 +5,20 @@ Sitio principal de FYIS, pensado para inicio rápido en móvil y PC.
 ## Lo que incluye
 
 - Diseño limpio y liviano (sin animaciones pesadas)
-- 3 botones principales: **Bots**, **Contacto** y **Referencias**
+- 2 botones principales: **Contacto** y **Bots**
+- **Contacto** como vista principal para acceso inmediato
 - En **Bots** muestra plataformas activas y abre Netflix en nueva pestaña
-- En **Contacto** muestra WhatsApp y Telegram
-- En **Referencias** muestra visor de 10 imágenes (Marzo 2026)
+- En **Contacto** muestra WhatsApp principal, WhatsApp de pago y Telegram
+- Enlace oficial: `https://fyis.mypemx.com/`
 - URL limpias (sin `.html`) gracias a Next.js
 - Configuración lista para deploy en Vercel
 
-## Carpeta de referencias
+## Contactos configurados
 
-Guarda tus pruebas en:
-
-- `public/referencias/`
-
-Nombres sugeridos:
-
-- `ref1.jpg`, `ref2.jpg`, ..., `ref10.jpg`
-
-También acepta `png` y `webp` con el mismo nombre base.
+- WhatsApp principal: `+63 9631207428`
+- WhatsApp del pago (escribir por respaldo): `+51 986 215 989`
+- Telegram principal: `@Fyis2`
+- Telegram secundario: `@Fyis1`
 
 ## Ejecutar en local
 
@@ -58,9 +54,7 @@ Si compras/configuras el dominio corto `fyis`, apúntalo en Vercel desde:
 
 ## Nota del sello
 
-Actualmente se usa `public/fyis-seal.svg` como sello visual optimizado.
-Si quieres usar exactamente tu imagen original, reemplázala por ejemplo con:
+Actualmente se usa `public/fyis-sello.png`.
+Si quieres actualizarlo, reemplázalo con el mismo nombre:
 
-- `public/fyis-seal.png`
-
-y cambia la ruta en `app/page.tsx`.
+- `public/fyis-sello.png`
