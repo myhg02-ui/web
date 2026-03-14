@@ -308,19 +308,23 @@ h3 {
   font-size: 0.78rem;
 }
 
-.ref-page {
-  min-height: 100vh;
-  display: grid;
-  place-items: center;
-  padding: 20px;
-  position: relative;
-  overflow: hidden;
+.contact-item a:hover,
+.backup-link-box a:hover {
+  text-decoration: underline;
 }
 
-  .contact-item a:hover,
-  .backup-link-box a:hover {
-  width: min(1100px, 100%);
-  background: #fff;
+@keyframes drift {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+  50% {
+    transform: translate3d(8px, -8px, 0);
+  }
+}
+
+@keyframes fadeUp {
+  from {
     opacity: 0;
     transform: translateY(10px);
   }
@@ -328,27 +332,6 @@ h3 {
     opacity: 1;
     transform: translateY(0);
   }
-}
-
-@keyframes fadeInScale {
-  from {
-    opacity: 0;
-    transform: scale(0.985);
-  }
-  to {
-    opacity: 1;
-    transform: scale(1);
-  }
-}
-
-.contact-list a {
-  color: var(--primary);
-  text-decoration: none;
-  font-weight: 700;
-}
-
-.contact-list a:hover {
-  text-decoration: underline;
 }
 
 @media (max-width: 640px) {
