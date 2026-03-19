@@ -5,6 +5,7 @@ import { useState } from "react";
 type TabKey = "contacto" | "bots";
 
 const NETFLIX_LINK = "https://fyistv.mypemx.com/";
+const WHATSAPP_PRIMARY_LINK = "https://wa.me/51994399929";
 const WHATSAPP_MAIN_LINK = "https://wa.me/639631207428";
 const WHATSAPP_PAYMENT_LINK = "https://wa.me/51986215989";
 const TELEGRAM_MAIN = "https://t.me/Fyis2";
@@ -42,8 +43,8 @@ export default function HomePage() {
             <p className="badge">Centro de soporte</p>
             <h1>FYIS</h1>
             <p className="subtitle">
-              Soporte profesional con atención directa y disponibilidad
-              permanente.
+              Presiona cualquier contacto y te dirigirá directo al canal
+              correspondiente.
             </p>
           </div>
         </header>
@@ -71,8 +72,8 @@ export default function HomePage() {
           <section className="panel" aria-label="Datos de contacto">
             <h2>Contacto oficial</h2>
             <p className="hint">
-              Guarda este enlace. Aquí se mantienen actualizados todos los
-              canales de contacto.
+              A veces los números se suspenden; por eso en esta web siempre
+              verás mis contactos actualizados.
             </p>
             <div className="backup-link-box">
               <span className="backup-link-label">Enlace:</span>
@@ -85,9 +86,15 @@ export default function HomePage() {
             </div>
             <div className="contact-grid">
               <article className="contact-item">
-                <p className="mini-tag">Canal principal</p>
+                <p className="mini-tag">WhatsApp</p>
                 <p>
-                  <strong>WhatsApp:</strong>{" "}
+                  <strong>Principal:</strong>{" "}
+                  <a href={WHATSAPP_PRIMARY_LINK} target="_blank" rel="noreferrer">
+                    +51 994 399 929
+                  </a>
+                </p>
+                <p>
+                  <strong>Secundario:</strong>{" "}
                   <a href={WHATSAPP_MAIN_LINK} target="_blank" rel="noreferrer">
                     +63 9631207428
                   </a>
