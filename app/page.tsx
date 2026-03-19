@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 type TabKey = "contacto" | "bots";
 
@@ -15,6 +15,17 @@ const SITE_LINK = "https://fyis.mypemx.com/";
 export default function HomePage() {
   const [tab, setTab] = useState<TabKey>("contacto");
   const [logoMissing, setLogoMissing] = useState(false);
+  const [updatedAt, setUpdatedAt] = useState<string>("");
+
+  useEffect(() => {
+    const formatter = new Intl.DateTimeFormat("es-PE", {
+      day: "2-digit",
+      month: "long",
+      year: "numeric"
+    });
+
+    setUpdatedAt(formatter.format(new Date()));
+  }, []);
 
   const copySiteLink = async () => {
     const link = typeof window !== "undefined" ? SITE_LINK : SITE_LINK;
@@ -75,6 +86,10 @@ export default function HomePage() {
               A veces los números se suspenden; por eso en esta web siempre
               verás mis contactos actualizados.
             </p>
+            <div className="updated-chip" aria-live="polite">
+              <span className="updated-dot" aria-hidden="true" />
+              Última actualización de contactos: {updatedAt || "hoy"}
+            </div>
             <div className="backup-link-box">
               <span className="backup-link-label">Enlace:</span>
               <a href={SITE_LINK} target="_blank" rel="noreferrer">
