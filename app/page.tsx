@@ -117,7 +117,7 @@ export default function HomePage() {
                   <span className="active-dot" aria-hidden="true" />
                   <strong>Secundario:</strong>{" "}
                   <a href={WHATSAPP_SECONDARY_LINK} target="_blank" rel="noreferrer">
-                    +62 8563531031
+                    +62 85643531031
                   </a>
                 </p>
               </article>
