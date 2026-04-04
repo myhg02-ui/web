@@ -6,7 +6,7 @@ type TabKey = "contacto" | "bots";
 
 const NETFLIX_LINK = "https://fyistv.mypemx.com/";
 const WHATSAPP_PRIMARY_LINK = "https://wa.me/639631207428";
-const WHATSAPP_SECONDARY_LINK = "https://wa.me/628563531031";
+const WHATSAPP_SECONDARY_LINK = "https://wa.me/6285643531031";
 const WHATSAPP_PAYMENT_LINK = "https://wa.me/51986215989";
 const TELEGRAM_MAIN = "https://t.me/Fyis2";
 const TELEGRAM_SECONDARY = "https://t.me/Fyis1";
