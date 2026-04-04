@@ -102,14 +102,13 @@ export default function HomePage() {
             <div className="contact-grid">
               <article className="contact-item">
                 <p className="mini-tag">WhatsApp</p>
-                <p>
-                  <strong>Principal:</strong>{" "}
-                  <a href={WHATSAPP_PRIMARY_LINK} target="_blank" rel="noreferrer">
-                    +51 994 399 929
-                  </a>
+                <p className="status-suspended">
+                  <strong>Principal (suspendido):</strong>{" "}
+                  <span className="suspended-number">+51 994 399 929</span>
                 </p>
-                <p>
-                  <strong>Secundario:</strong>{" "}
+                <p className="status-active">
+                  <span className="active-dot" aria-hidden="true" />
+                  <strong>Activo:</strong>{" "}
                   <a href={WHATSAPP_MAIN_LINK} target="_blank" rel="noreferrer">
                     +63 9631207428
                   </a>

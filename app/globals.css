@@ -209,6 +209,47 @@ h2 {
   box-shadow: 0 0 0 4px rgba(43, 201, 112, 0.18);
 }
 
+.status-suspended {
+  opacity: 0.6;
+  color: var(--muted);
+  margin-bottom: 6px;
+}
+
+.suspended-number {
+  text-decoration: line-through;
+  color: #c24848;
+  font-weight: 600;
+}
+
+.status-active {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: #2bc970;
+  font-weight: 600;
+}
+
+.active-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #2bc970;
+  flex-shrink: 0;
+  box-shadow: 0 0 6px rgba(43, 201, 112, 0.5);
+  animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    box-shadow: 0 0 6px rgba(43, 201, 112, 0.5);
+    transform: scale(1);
+  }
+  50% {
+    box-shadow: 0 0 12px rgba(43, 201, 112, 0.8);
+    transform: scale(1.2);
+  }
+}
+
 .platform-card {
   display: flex;
   flex-wrap: wrap;
