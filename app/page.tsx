@@ -5,8 +5,8 @@ import { useEffect, useState } from "react";
 type TabKey = "contacto" | "bots";
 
 const NETFLIX_LINK = "https://fyistv.mypemx.com/";
-const WHATSAPP_PRIMARY_LINK = "https://wa.me/51994399929";
-const WHATSAPP_MAIN_LINK = "https://wa.me/639631207428";
+const WHATSAPP_PRIMARY_LINK = "https://wa.me/639631207428";
+const WHATSAPP_SECONDARY_LINK = "https://wa.me/628563531031";
 const WHATSAPP_PAYMENT_LINK = "https://wa.me/51986215989";
 const TELEGRAM_MAIN = "https://t.me/Fyis2";
 const TELEGRAM_SECONDARY = "https://t.me/Fyis1";
@@ -103,14 +103,21 @@ export default function HomePage() {
               <article className="contact-item">
                 <p className="mini-tag">WhatsApp</p>
                 <p className="status-suspended">
-                  <strong>Principal (suspendido):</strong>{" "}
-                  <span className="suspended-number">+51 994 399 929</span>
+                  <strong>❌ NO escribir:</strong>{" "}
+                  <span className="suspended-number">+51 994 399 929 (suspendido)</span>
                 </p>
                 <p className="status-active">
                   <span className="active-dot" aria-hidden="true" />
-                  <strong>Activo:</strong>{" "}
-                  <a href={WHATSAPP_MAIN_LINK} target="_blank" rel="noreferrer">
+                  <strong>Principal:</strong>{" "}
+                  <a href={WHATSAPP_PRIMARY_LINK} target="_blank" rel="noreferrer">
                     +63 9631207428
+                  </a>
+                </p>
+                <p className="status-active">
+                  <span className="active-dot" aria-hidden="true" />
+                  <strong>Secundario:</strong>{" "}
+                  <a href={WHATSAPP_SECONDARY_LINK} target="_blank" rel="noreferrer">
+                    +62 8563531031
                   </a>
                 </p>
               </article>
